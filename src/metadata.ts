@@ -8,19 +8,19 @@ import type { Metadata, Viewport } from 'next';
 // ===========================================================
 
 export const title: string = 
-  "Reverse";
+  "Yogaa | Portfolio";
 
 export const description: string = 
-  "Reverse is a Web3 KOL specialist agency focusing on collaboration management, strategic campaigns, project due diligence, and offering an expansive support hub for various projects.";
+  "Hey! My name is Yogaa, I'm a full-stack developer engineer.";
 
 export const keywords: string[] =
-  ['Reverse', 'Web3', 'KOL', 'specialist', 'agency', 'collaboration management', 'strategic campaigns', 'project due diligence', 'support hub'];
+  ['developer', 'frontend', 'backend', 'engineer', 'full-stack', 'blockchain', 'freelance', 'web2', 'web3'];
   
 export const twitter: string = 
-  "@ReverseAgency";
+  "@YogaaJS";
 
 export const url: string = 
-  "https://reverse-agency.ch";
+  "https://yogaa.dev";
 
 
 //  Metadata

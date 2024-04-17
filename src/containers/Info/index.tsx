@@ -11,7 +11,7 @@ import { FaXmark } from "react-icons/fa6";
 // ===========================================================
 
 function Info() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;
 
@@ -22,8 +22,8 @@ function Info() {
       bg-[#000]
       flex flex-col items-center tablet:flex-row
     ">
-      <div className="w-full p-6">
-        {/* CONTENT */}
+      <div className="font-f3 w-full p-6 text-white text-xl">
+        The site is under construction...
       </div>
       <button 
         onClick={() => setIsVisible(false)} 
