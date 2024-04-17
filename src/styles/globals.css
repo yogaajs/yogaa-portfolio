@@ -1,0 +1,65 @@
+/* ------------------------------
+  Tailwind
+------------------------------ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ------------------------------
+  Root
+------------------------------ */
+
+
+/* ------------------------------
+  HTML
+------------------------------ */
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none; /* This prevents the bounce effect */
+}
+
+
+/* ------------------------------
+  Fields
+------------------------------ */
+
+input {
+  /* Size and layout */
+  padding: 12px 12px; /* Padding inside the input */
+  margin: 0px; /* Margin around the input */
+  box-sizing: border-box; /* Include padding and border in the input's width and height */
+
+  /* Typography */
+  font-size: 14px; /* Text size inside the input */
+  color: #ccd6f6; /* Text color inside the input */
+  text-align: left; /* Text alignment inside the input */
+
+  /* Border and outline */
+  border: 0px solid #1f2937; /* Border around the input */
+  outline: none; /* Remove the default focus highlight */
+
+  /* Background */
+  background-color: transparent; /* Background color of the input */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+
+  /* Shadows and effects */
+  box-shadow: none; /* Shadow effect around the input */
+}
+
+input:hover {
+  border-color: transparent; /* Border color on hover */
+}
+
+input:focus {
+  background-color: #ffffff05; /* Background color of the input */
+  border-color: transparent;
+  outline: none;
+}
