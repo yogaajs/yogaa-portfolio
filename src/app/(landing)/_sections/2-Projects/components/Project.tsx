@@ -36,7 +36,7 @@ const Project: React.FC<Props> = ({ type, title, description, skills, video }) =
             <div className="w-full flex 
             group-odd:justify-end group-even:justify-start">
                 <div className="w-full max-w-[600px] flex items-center rounded-lg overflow-hidden border-2 border-[#20313c] overflow-hidden">
-                    <video autoPlay muted loop src={video}
+                    <video autoPlay muted loop playsInline src={video}
                         style={{ width: '100%', height: 'auto' }}
                     >
                         Your browser does not support the video tag.
