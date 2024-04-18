@@ -19,9 +19,9 @@ const isProduction = true;
 
 export default function Page() {
   return (
-    <main className="relative z-[2] w-full">
+    <main className="relative w-full">
       <Hero /> 
-      <div className="relative w-full h-fit bg-base-100 rounded-t-3xl shadow-[0_-5px_100px_rgba(0,0,0)]">
+      <div className="relative z-[2] w-full h-fit bg-base-100 rounded-t-3xl shadow-[0_-5px_100px_rgba(0,0,0)]">
         <Projects />
         <Skills />
         <Contact />
