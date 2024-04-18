@@ -38,7 +38,7 @@ input {
   box-sizing: border-box; /* Include padding and border in the input's width and height */
 
   /* Typography */
-  font-size: 14px; /* Text size inside the input */
+  font-size: 16px; /* Text size inside the input */
   color: #ccd6f6; /* Text color inside the input */
   text-align: left; /* Text alignment inside the input */
 

@@ -11,7 +11,7 @@ import { f1, f2, f3 } from '@/fonts';
 // Contexts
 import ThemeProvider from "@/providers/ThemeProvider";
 import Toaster from "@/containers/Toaster";
-
+import Info from '@/containers/Info';
 
 
 //  Metadata & Viewport
@@ -35,6 +35,7 @@ export default function RootLayout({
         {/* <ThemeProvider> */}
           {children}
         {/* </ThemeProvider> */}
+        {/* <Info /> */}
         <Toaster />
       </body>
     </html>

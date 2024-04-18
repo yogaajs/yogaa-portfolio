@@ -5,7 +5,7 @@
 import React from 'react';
 
 // Icons
-import { FaTwitter, FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa6";
+import { FaTwitter, FaGithub, FaLinkedin, FaTelegram, FaDiscord } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 
@@ -25,32 +25,42 @@ export interface LinkType {
   
 //  Constants
 // ===========================================================
-  
-export const twitter: LinkType = {
-    text: "Twitter",
-    Icon: FaTwitter,
-    props: {
-      href: "",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    }
-}
 
 export const linkedin: LinkType = {
-    text: "LinkedIn",
-    Icon: FaLinkedin,
-    props: {
-      href: "",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    }
+  text: "LinkedIn",
+  Icon: FaLinkedin,
+  props: {
+    href: "",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }
+}
+
+export const twitter: LinkType = {
+  text: "Twitter",
+  Icon: FaTwitter,
+  props: {
+    href: "https://twitter.com/YogaaJS",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }
+}
+
+export const discord: LinkType = {
+  text: "Discord",
+  Icon: FaDiscord,
+  props: {
+    href: "https://discordapp.com/users/705707677589831700",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }
 }
 
 export const telegram: LinkType = {
   text: "Telegram",
   Icon: FaTelegram,
   props: {
-    href: "",
+    href: "https://t.me/YogaaJS",
     target: "_blank",
     rel: "noopener noreferrer"
   }
@@ -60,7 +70,7 @@ export const github: LinkType = {
     text: "Github",
     Icon: FaGithub,
     props: {
-      href: "",
+      href: "https://github.com/yogaajs",
       target: "_blank",
       rel: "noopener noreferrer"
     }

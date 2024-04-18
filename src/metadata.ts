@@ -11,10 +11,10 @@ export const title: string =
   "Yogaa | Portfolio";
 
 export const description: string = 
-  "Hey! My name is Yogaa, I'm a full-stack developer engineer.";
+  "Hey! I'm Yogaa, a full-stack developer engineer";
 
 export const keywords: string[] =
-  ['developer', 'frontend', 'backend', 'engineer', 'full-stack', 'blockchain', 'freelance', 'web2', 'web3'];
+  ['developer', 'frontend', 'backend', 'engineer', 'fullstack', 'blockchain', 'freelance', 'web2', 'web3'];
   
 export const twitter: string = 
   "@YogaaJS";

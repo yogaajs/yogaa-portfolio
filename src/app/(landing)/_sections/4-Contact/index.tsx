@@ -7,13 +7,13 @@ import * as SectionTitle from '@/components/shared/SectionTitle';
 
 // Locals
 import Conversation from './components/Conversation';
-import { linkedin, twitter, github, email, telegram } from '@/constants/socials';
+import { linkedin, discord, twitter, github, email, telegram } from '@/constants/socials';
 
 
 //  Constants
 // ===========================================================
 
-const socials = [twitter, telegram, github, linkedin, email];
+const socials = [twitter, discord, telegram, github, linkedin, email];
 
 
 //  Component
@@ -49,10 +49,10 @@ function Section() {
 
                             return (
                                 <a key={`contact-a-${text}`} {...props} className="flex items-center gap-2 
-                                    p-1 hover:gap-4 transition-all ease-in-out duration-300
+                                    p-1 transition-all ease-in-out duration-300 text-secondary hover:text-primary
                                 ">
-                                    <Icon className="text-xl text-white" />
-                                    <span className="font-f3 text-white"> 
+                                    <Icon className="text-xl" />
+                                    <span className="font-f3"> 
                                         {text}
                                     </span>
                                 </a>

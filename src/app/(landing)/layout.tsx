@@ -2,9 +2,8 @@
 // ===========================================================
 
 // Containers
-import Header from '@/containers/Header';
-import Footer from '@/containers/Footer';
-import Info from '@/containers/Info';
+import Header from './_components/Header';
+import Footer from './_components/Footer';
 
 
 //  Layout
@@ -17,11 +16,10 @@ export default function Layout({
 }) {
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-[-1] border-t border-[#00000010] dark:border-[#ffffff10]" />
+      <div className="fixed top-0 left-0 w-full border-t border-[#00000010] dark:border-[#ffffff10]" />
       <Header />
       {children}
       <Footer />
-      <Info />
     </>
   )
 }

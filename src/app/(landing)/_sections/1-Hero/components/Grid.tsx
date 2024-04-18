@@ -51,8 +51,8 @@ const Background: React.FC = () => {
 
 
   return (
-    <div className="fixed inset-0 h-[100vh] z-[0] flex justify-center items-center">
-      <div className="absolute inset-0 flex flex-col justify-evenly">
+    <div className="fixed inset-0 h-lvh z-[0] flex justify-center items-center">
+      <div className="absolute w-full h-full flex flex-col justify-evenly">
         {Array.from({ length: lines.y }).map((number, index) => {
           const randomDuration = Math.floor(Math.random() * 2000) + 1000;
           const randomDelay = Math.floor(Math.random() * 2000);
@@ -67,7 +67,7 @@ const Background: React.FC = () => {
           )
         })}
       </div>
-      <div className="absolute inset-0 flex flex-row justify-evenly">
+      <div className="absolute w-full h-full flex flex-row justify-evenly">
         {Array.from({ length: lines.x }).map((number, index) => {
           const randomDuration = Math.floor(Math.random() * 2000) + 1000;
           const randomDelay = Math.floor(Math.random() * 2000);

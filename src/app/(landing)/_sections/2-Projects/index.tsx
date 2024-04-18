@@ -26,9 +26,8 @@ function Section() {
                 <SectionTitle.h2
                     id="01"
                     title="Curious about my work?"
-                    description="I've worked on projects across Web 2.0 and Web 3.0, from landing pages 
-                    and applications to SaaS platforms and bots. If you are curious to learn more about 
-                    my work, please do not hesitate to contact me! In the meantime, here are some highlights..."
+                    description="I've developed projects across Web 2.0 and Web 3.0, including landing pages, apps, 
+                    SaaS, and bots. Curious? Feel free to contact me! Here are some highlights..."
                 />
             </div>
             <ul className="w-full max-w-[1000px] flex flex-col justify-center px-3">
