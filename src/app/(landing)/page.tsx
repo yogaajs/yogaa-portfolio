@@ -2,6 +2,8 @@
 // ===========================================================
 
 // Components
+import SmoothScroll from '@/providers/SmoothScroll';
+
 import ScrollTop from '@/components/common/ScrollTop';
 
 // Sections
@@ -22,7 +24,7 @@ const isProduction = true;
 
 export default function Page() {
   return (
-    <main className="relative w-full h-fit">
+    <main className="relative w-full">
       <Hero /> 
       <div className="relative w-full h-fit bg-base-100 rounded-t-3xl shadow-[0_-5px_100px_rgba(0,0,0)]">
         <Projects />

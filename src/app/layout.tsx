@@ -10,7 +10,8 @@ import { f1, f2, f3 } from '@/fonts';
 
 // Contexts
 import ThemeProvider from "@/providers/ThemeProvider";
-import ToastProvider from "@/providers/ToastProvider";
+import Toaster from "@/containers/Toaster";
+
 
 
 //  Metadata & Viewport
@@ -33,8 +34,8 @@ export default function RootLayout({
       <body className="font-f1 bg-base-100">
         {/* <ThemeProvider> */}
           {children}
-          <ToastProvider />
         {/* </ThemeProvider> */}
+        <Toaster />
       </body>
     </html>
   )

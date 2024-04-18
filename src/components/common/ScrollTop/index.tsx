@@ -3,52 +3,51 @@
 //  Imports
 // ===========================================================
 
-import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from "react-icons/fa6";
+// Libraries
+import React, { useState, useEffect } from 'react'
+
+// Local
+import styles from './styles.module.css'
 
 
 //  Component
 // ===========================================================
 
-function ScrollToTop() {
-    const [showButton, setShowButton] = useState(false);
+const ScrollToTop = () => {
+    const [showButton, setShowButton] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 300) {
-                setShowButton(true);
+                setShowButton(true)
             } else {
-                setShowButton(false);
+                setShowButton(false)
             }
-        };
+        }
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // for smooth scrolling
-        });
-    };
-
+            behavior: 'smooth'
+        })
+    }
 
     return showButton ? (
         <button 
             type="button" 
-            className="
-                fixed z-[100]
-                bottom-2 tablet:bottom-5
-                right-2 tablet:right-5
-                rounded-full bg-[#00000050] hover:bg-[#ffffff80]
-                p-3
-            "
+            className={styles.button}
             onClick={scrollToTop}
         >
-            <FaArrowUp className="text-white text-lg tablet:text-2xl" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V6"/>
+                <path d="M5 12l7-7 7 7"/>
+            </svg>
         </button>
-    ) : null;
-};
+    ) : (null)
+}
 
-export default ScrollToTop;
+export default ScrollToTop

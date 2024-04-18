@@ -4,13 +4,13 @@
 // ===========================================================
 
 import { ThemeProvider } from 'next-themes';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 //  Types
 // ===========================================================
 
-type Props = {
+interface Props {
     children: React.ReactNode;
 }
 
@@ -18,22 +18,25 @@ type Props = {
 //  Context
 // ===========================================================
 
-const Provider = ({children} : Props) => {
-    const [mounted,setMounted] = useState<boolean>(false);
+const Context: React.FC<Props> = ({ children }) => {
+    const [mounted, setMounted] = useState<boolean>(false);
 
-    useEffect (() => {
+    // Effect to set mounted to true after initial mount
+    useEffect(() => {
         setMounted(true);
-    },[]);
+    }, []);
 
-    if(!mounted){
+    // Return children without ThemeProvider if not mounted yet
+    if (!mounted) {
         return <>{children}</>;
     }
 
+    // Return ThemeProvider with children when mounted
     return (
         <ThemeProvider enableSystem={true} attribute='class'>
             {children}
         </ThemeProvider>
-    )
+    );
 }
 
-export default Provider;
+export default Context;

@@ -3,14 +3,14 @@
 //  Imports
 // ===========================================================
 
-// Locals
-import styles from './styles.module.css';
+// Local
+import styles from './styles.module.css'
 
 
 //  Types
 // ===========================================================
 
-interface ComponentProps {
+interface Props {
     id: string;  // The id of the element to scroll to
 }
 
@@ -18,13 +18,13 @@ interface ComponentProps {
 //  Component
 // ===========================================================
 
-const MouseScroll: React.FC<ComponentProps> = ({ id }) => {
+const MouseScroll: React.FC<Props> = ({ id }) => {
     const scrollToSection = () => {
-        const section = document.getElementById(id);
+        const section = document.getElementById(id)
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
-    };
+    }
 
     return (
         <button type="button" className={styles.scrolldown} onClick={scrollToSection}>
@@ -36,4 +36,4 @@ const MouseScroll: React.FC<ComponentProps> = ({ id }) => {
     )
 }
 
-export default MouseScroll;
+export default MouseScroll

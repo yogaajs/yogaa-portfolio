@@ -1,15 +1,15 @@
 //  Libraries
 // ===========================================================
 
-import { Toaster } from 'sonner';
+import { Toaster as Sonner } from 'sonner';
 
 
-//  Exports
+//  Context
 // ===========================================================
 
-export default function ToastProvider() {
+function Toaster() {
 	return (
-    <Toaster 
+    <Sonner 
       position="top-right"
       richColors
       closeButton
@@ -17,3 +17,5 @@ export default function ToastProvider() {
     />
   );
 }
+
+export default Toaster;
