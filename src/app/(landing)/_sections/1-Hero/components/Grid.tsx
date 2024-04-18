@@ -51,36 +51,38 @@ const Background: React.FC = () => {
 
 
   return (
-    <div className="fixed inset-0 h-lvh z-[0] flex justify-center items-center">
-      <div className="absolute w-full h-full flex flex-col justify-evenly">
-        {Array.from({ length: lines.y }).map((number, index) => {
-          const randomDuration = Math.floor(Math.random() * 2000) + 1000;
-          const randomDelay = Math.floor(Math.random() * 2000);
-          const randomPos = Math.random() < 0.5 ? 'left-0' : 'right-0';
-          return (
-            <div key={`grid-y-${index}`} className="relative w-full h-0.5">
-              <div
-                className={`h-full ${lineClassName} ${randomPos}`}
-                style={{ width: `${size}%`, transitionDelay: `${randomDelay}ms`, transitionDuration: `${randomDuration}ms` }}
-              />
-            </div>
-          )
-        })}
-      </div>
-      <div className="absolute w-full h-full flex flex-row justify-evenly">
-        {Array.from({ length: lines.x }).map((number, index) => {
-          const randomDuration = Math.floor(Math.random() * 2000) + 1000;
-          const randomDelay = Math.floor(Math.random() * 2000);
-          const randomPos = Math.random() < 0.5 ? 'top-0' : 'bottom-0';
-          return (
-            <div key={`grid-x-${index}`} className="relative w-0.5 h-full">
-              <div
-                className={`w-full ${lineClassName} ${randomPos}`}
-                style={{ height: `${size}%`, transitionDelay: `${randomDelay}ms`, transitionDuration: `${randomDuration}ms` }}
-              />
-            </div>
-          )
-        })}
+    <div className="fixed top-0 left-0 w-screen h-full min-h-lvh z-[0] p-1">
+      <div className="relative w-full h-full flex justify-center items-center bg-test-1">
+        <div className="absolute w-full h-full flex flex-col justify-evenly">
+          {Array.from({ length: lines.y }).map((number, index) => {
+            const randomDuration = Math.floor(Math.random() * 2000) + 1000;
+            const randomDelay = Math.floor(Math.random() * 2000);
+            const randomPos = Math.random() < 0.5 ? 'left-0' : 'right-0';
+            return (
+              <div key={`grid-y-${index}`} className="relative w-full h-0.5">
+                <div
+                  className={`h-full ${lineClassName} ${randomPos}`}
+                  style={{ width: `${size}%`, transitionDelay: `${randomDelay}ms`, transitionDuration: `${randomDuration}ms` }}
+                />
+              </div>
+            )
+          })}
+        </div>
+        <div className="absolute w-full h-full flex flex-row justify-evenly">
+          {Array.from({ length: lines.x }).map((number, index) => {
+            const randomDuration = Math.floor(Math.random() * 2000) + 1000;
+            const randomDelay = Math.floor(Math.random() * 2000);
+            const randomPos = Math.random() < 0.5 ? 'top-0' : 'bottom-0';
+            return (
+              <div key={`grid-x-${index}`} className="relative w-0.5 h-full">
+                <div
+                  className={`w-full ${lineClassName} ${randomPos}`}
+                  style={{ height: `${size}%`, transitionDelay: `${randomDelay}ms`, transitionDuration: `${randomDuration}ms` }}
+                />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   );

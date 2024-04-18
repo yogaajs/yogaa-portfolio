@@ -27,7 +27,7 @@ function Hero() {
             "
         >
             <Grid />
-            <div className="relative w-full h-[85vh] max-w-[1300px] flex flex-col justify-center items-center">
+            <div className="relative w-full min-h-[85svh] max-w-[1300px] flex flex-col justify-center items-center">
                 <div className="relative z-[1] w-full flex justify-end
                  tablet:absolute tablet:right-0 tablet:w-fit">
                     <MotionEnterRight delay={0.2} duration={1}>
@@ -59,7 +59,7 @@ function Hero() {
                     </MotionEnterBottom>
                 </div>
             </div>
-            <div className="relative w-full h-[15vh] flex justify-center items-center">
+            <div className="relative w-full min-h-[15svh] flex justify-center items-center">
                 <MotionEnterBottom delay={0.75} duration={1}>
                     <MouseScroll id="projects" />
                 </MotionEnterBottom>
