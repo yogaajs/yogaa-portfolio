@@ -19,7 +19,7 @@ const socials = [linkedin, twitter, github, email];
 function Footer() {
   return (
     <footer className="
-      relative z-[1] 
+      relative z-[2] 
       w-full h-fit 
       bg-base-100
     ">

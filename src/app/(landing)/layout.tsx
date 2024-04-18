@@ -1,6 +1,10 @@
 //  Imports
 // ===========================================================
 
+
+// Components
+import ScrollTop from '@/components/common/ScrollTop';
+
 // Containers
 import Header from './_components/Header';
 import Footer from './_components/Footer';
@@ -20,6 +24,7 @@ export default function Layout({
       <Header />
       {children}
       <Footer />
+      <ScrollTop />
     </>
   )
 }
