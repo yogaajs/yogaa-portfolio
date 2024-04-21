@@ -162,6 +162,13 @@ function Conversation() {
             ])
         } catch (err) {
             console.error(err);
+            setResponses(prevState => [
+                ...prevState,
+                {
+                    type: "yogaa",
+                    text: "Oops, it looks like there's a glitch with my email! Please reach out to me on Twitter or Discord instead!"
+                }
+            ])
         }
     };
 
