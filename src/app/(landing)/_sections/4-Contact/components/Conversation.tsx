@@ -18,16 +18,16 @@ import Card from '@/components/shared/Card';
 //  Components (local)
 // ===========================================================
 
-function Header({ responses, setResponses } : { responses: any; setResponses: any; } ) {
-    const handleReset = (): void => {
-        setResponses([{
-            type: "yogaa",
-            text: "Hey, I'm yoga's AI assistant. Quickly tell me what you're looking for or what you need?"
-        }]);
-    };
+function Header() {
+    // const handleReset = (): void => {
+    //     setResponses([{
+    //         type: "yogaa",
+    //         text: "Hey, I'm yoga's AI assistant. Quickly tell me what you're looking for or what you need?"
+    //     }]);
+    // };
 
     return (
-        <div className="w-full h-fit flex items-center gap-2 px-2 py-1 border-b border-border">
+        <div className="w-full h-fit flex items-center gap-2 px-2 py-2 border-b border-border">
             <img
                 className="w-6 h-6 rounded-full bg-[#ffffff30]"
                 src="/assets/avatar.png"
@@ -38,13 +38,13 @@ function Header({ responses, setResponses } : { responses: any; setResponses: an
                     YogaaBot
                 </p>
             </div>
-            <button
+            {/* <button
                 type="button" 
                 className={`p-2 rounded-full text-neutral-content hover:text-primary ${(responses.length > 1) ? "" : "invisible"}`}
                 onClick={handleReset}
             >
                 <TbReload className="text-2xl" />
-            </button> 
+            </button>  */}
         </div>
     )
 }
@@ -176,7 +176,7 @@ function Conversation() {
     return (
         <Card>
             <div className="relative w-full h-full min-h-[275px] bg-base-300 flex flex-col">
-                <Header responses={responses} setResponses={setResponses} />
+                <Header />
                 <div className="w-full grow flex flex-col p-2">
                     {responses.map((e, index) => {
                         const { type, text } = e;
