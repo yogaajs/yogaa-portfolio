@@ -8,10 +8,9 @@ import '@/styles/globals.css';
 import { _viewport, _metadata } from '@/metadata';
 import { f1, f2, f3 } from '@/fonts';
 
-// Contexts
+// Global
 import ThemeProvider from "@/providers/ThemeProvider";
 import Toaster from "@/containers/Toaster";
-import Info from '@/containers/Info';
 
 
 //  Metadata & Viewport

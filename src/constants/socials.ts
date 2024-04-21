@@ -5,7 +5,7 @@
 import React from 'react';
 
 // Icons
-import { FaTwitter, FaGithub, FaLinkedin, FaTelegram, FaDiscord } from "react-icons/fa6";
+import { FaTwitter, FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 
@@ -13,13 +13,13 @@ import { MdEmail } from "react-icons/md";
 // ===========================================================
 
 export interface LinkType {
-    text: string;
-    Icon: React.ElementType;
-    props: {
-      href: string;
-      target: string;
-      rel: string;
-    };
+  text: string;
+  Icon: React.ElementType;
+  props: {
+    href: string;
+    target: string;
+    rel: string;
+  };
 }
   
   
@@ -51,16 +51,6 @@ export const discord: LinkType = {
   Icon: FaDiscord,
   props: {
     href: "https://discordapp.com/users/705707677589831700",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }
-}
-
-export const telegram: LinkType = {
-  text: "Telegram",
-  Icon: FaTelegram,
-  props: {
-    href: "https://t.me/YogaaJS",
     target: "_blank",
     rel: "noopener noreferrer"
   }

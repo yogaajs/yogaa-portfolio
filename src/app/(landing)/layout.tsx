@@ -1,9 +1,8 @@
 //  Imports
 // ===========================================================
 
-
 // Components
-import ScrollTop from '@/components/common/ScrollTop';
+import ScrollToTop from '@/components/common/ScrollToTop';
 
 // Containers
 import Header from './_components/Header';
@@ -20,11 +19,11 @@ export default function Layout({
 }) {
   return (
     <>
-      <div className="fixed top-0 left-0 w-full border-t border-[#00000010] dark:border-[#ffffff10]" />
+      <div className="fixed top-0 left-0 w-full border-t border-[#707070a0]" />
       <Header />
       {children}
       <Footer />
-      <ScrollTop />
+      <ScrollToTop />
     </>
   )
 }

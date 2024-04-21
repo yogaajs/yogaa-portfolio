@@ -52,7 +52,6 @@ interface Props {
 // Virtual ScrollBar Component
 // ===========================================================
 
-
 const VirtualSmoothScroll: React.FC<Props> = ({ children }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 

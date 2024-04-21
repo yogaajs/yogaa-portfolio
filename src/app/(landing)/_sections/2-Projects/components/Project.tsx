@@ -7,6 +7,9 @@ import React from "react";
 // Components
 import { MotionEnterLeft, MotionEnterBottom } from '@/components/shared/MotionEnter';
 
+// Components (local)
+import ConsoleText from "./ConsoleText";
+
 
 //  Types
 // ===========================================================
@@ -52,7 +55,7 @@ const Project: React.FC<Props> = ({ type, title, description, skills, video }) =
                                 {type}
                             </p>
                             <p className="text-3xl text-secondary font-f3 leading-none">
-                                {title}
+                                <ConsoleText text={title} />
                             </p>
                         </div>
                     </MotionEnterBottom>

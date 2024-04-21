@@ -7,13 +7,13 @@ import * as SectionTitle from '@/components/shared/SectionTitle';
 
 // Locals
 import Conversation from './components/Conversation';
-import { linkedin, discord, twitter, github, email, telegram } from '@/constants/socials';
+import { linkedin, discord, twitter, github, email } from '@/constants/socials';
 
 
 //  Constants
 // ===========================================================
 
-const socials = [twitter, discord, telegram, github, linkedin, email];
+const socials = [twitter, discord, github, email];
 
 
 //  Component
@@ -40,8 +40,8 @@ function Section() {
             <div className="w-full max-w-[1000px] flex flex-col-reverse gap-6 p-3 tablet:flex-row items-start">
                 <div className="w-full h-fit flex flex-col justify-center items-center tablet:items-start gap-6">
                     <p className="font-f1 font-light text-base text-white text-center tablet:text-left">
-                        Feel free to drop me a line through social media, follow me or chat directly here with YogaaGPT—whatever works for you. 
-                        Just let me know what you need, and YogaaGPT will ensure I get your message!
+                        Feel free to drop me a line through social media, follow me or chat directly here with YogaaBot—whatever works for you. 
+                        Just let me know what you need, and YogaaBot will ensure I get your message!
                     </p>
                     <div className="w-full h-fit flex flex-col justify-center items-center tablet:items-start">
                         {socials.map(e => {

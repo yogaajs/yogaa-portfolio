@@ -38,7 +38,7 @@ function Section() {
                 <div className="w-full grid mobile:grid-cols-2 laptop:grid-cols-3 gap-3">
                     <Skill title="Programming Languages" value={8} src="/assets/skills/languages.jpg">
                         <p>
-                            JavaScript, TypeScript, HTML, CSS, Solidity, PHP, C, C#, Swift...
+                            JavaScript, TypeScript, HTML, CSS, Solidity, C, C#, Swift...
                         </p>
                     </Skill>
                     <Skill title="Frameworks" value={5} src="/assets/skills/frameworks.png">

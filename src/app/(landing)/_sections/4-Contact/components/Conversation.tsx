@@ -5,8 +5,8 @@
 // ===========================================================
 
 // Libraries
-import React, { useState, ChangeEvent, FormEvent, Fragment } from 'react';
-import { TbReload, TbArrowRight } from "react-icons/tb";
+import React, { useState, useEffect, ChangeEvent, FormEvent, Fragment } from 'react';
+import { TbReload, TbArrowRight, TbCheck } from "react-icons/tb";
 
 // Components
 import { MotionEnterOpacity } from '@/components/shared/MotionEnter';
@@ -17,6 +17,37 @@ import Card from '@/components/shared/Card';
 
 //  Components (local)
 // ===========================================================
+
+function Header({ responses, setResponses } : { responses: any; setResponses: any; } ) {
+    const handleReset = (): void => {
+        setResponses([{
+            type: "yogaa",
+            text: "Hey, I'm yoga's AI assistant. Quickly tell me what you're looking for or what you need?"
+        }]);
+    };
+
+    return (
+        <div className="w-full h-fit flex items-center gap-2 px-2 py-1 border-b border-border">
+            <img
+                className="w-6 h-6 rounded-full bg-[#ffffff30]"
+                src="/assets/avatar.png"
+                alt="yogaaGPT"
+            />
+            <div className="w-full px-1">
+                <p className="text-md text-secondary font-f3 leading-none">
+                    YogaaBot
+                </p>
+            </div>
+            <button
+                type="button" 
+                className={`p-2 rounded-full text-neutral-content hover:text-primary ${(responses.length > 1) ? "" : "invisible"}`}
+                onClick={handleReset}
+            >
+                <TbReload className="text-2xl" />
+            </button> 
+        </div>
+    )
+}
 
 function Bubble({ user, yogaa } : { user?: string; yogaa?: string }) {
     const isYogaa = (!user && yogaa);
@@ -66,25 +97,26 @@ function Input({ setValue } : { setValue: (value: string) => void; }) {
     )
 }
 
+function Confirm({ sendMail } : { sendMail: () => void; }) {
+    return (
+        <button type="button" className="bg-primary px-3 py-2 flex justify-center border-t border-border" onClick={sendMail}>
+            <TbCheck className="text-2xl text-white" />
+        </button>
+    )
+}
+
 
 //  Component
 // ===========================================================
 
 function Conversation() {
+    const [done, setDone] = useState<boolean>(false);
     const [responses, setResponses] = useState<{ type: string; text: string; }[]>([
         {
             type: "yogaa",
-            text: "Hey, I'm yogaa's AI assistant. Quickly tell me what you're looking for or what you need?"
+            text: "Hey, I'm yogaa's assistant. Quickly tell me what you're looking for or what you need?"
         },
     ]);
-
-    // Handler for input changes with type annotation
-    const handleReset = (): void => {
-        setResponses([{
-            type: "yogaa",
-            text: "Hey, I'm yoga's AI assistant. Quickly tell me what you're looking for or what you need?"
-        }]);
-    };
 
     // Handler for input changes with type annotation
     const handleInputChange = (value: string): void => {
@@ -101,15 +133,35 @@ function Conversation() {
             }, 1000)
         } else {
             setResponses(prevState => [...prevState, { type: "user", text: value }]);
-            setTimeout(() => {
-                setResponses(prevState => [
-                    ...prevState,
-                    {
-                        type: "yogaa",
-                        text: "Thanks! I've forwarded this to Yogaa. See you later!"
-                    }
-                ])
-            }, 1000)
+        }
+    };
+
+    // Send mail
+    const sendMail = async () => {
+        setDone(true);
+        try {
+            const data = responses.map(e => `<p>${e.type}: ${e.text}</p>`)
+            const response = await fetch('/api/contact', {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`response status: ${response.status}`);
+            }
+            const responseData = await response.json();
+            setResponses(prevState => [
+                ...prevState,
+                {
+                    type: "yogaa",
+                    text: "Thanks! I've forwarded this to Yogaa. See you later!"
+                }
+            ])
+        } catch (err) {
+            console.error(err);
         }
     };
 
@@ -117,25 +169,7 @@ function Conversation() {
     return (
         <Card>
             <div className="relative w-full h-full min-h-[275px] bg-base-300 flex flex-col">
-                <div className="w-full h-fit flex items-center gap-2 px-2 py-1 border-b border-border">
-                    <img
-                        className="w-6 h-6 rounded-full bg-[#ffffff30]"
-                        src="/assets/avatar.png"
-                        alt="yogaaGPT"
-                    />
-                    <div className="w-full px-1">
-                        <p className="text-md text-secondary font-f3 leading-none">
-                            YogaaGPT
-                        </p>
-                    </div>
-                    <button
-                        type="button" 
-                        className={`p-2 rounded-full text-neutral-content hover:text-primary ${(responses.length > 1) ? "" : "invisible"}`}
-                        onClick={handleReset}
-                    >
-                        <TbReload className="text-2xl" />
-                    </button> 
-                </div>
+                <Header responses={responses} setResponses={setResponses} />
                 <div className="w-full grow flex flex-col p-2">
                     {responses.map((e, index) => {
                         const { type, text } = e;
@@ -150,8 +184,13 @@ function Conversation() {
                         )
                     })}
                 </div>
-                {responses.length < 4 &&
-                    <Input setValue={handleInputChange} />            
+                {!done &&
+                    <>
+                        <Input setValue={handleInputChange} />            
+                        {responses.length >= 4 &&
+                            <Confirm sendMail={sendMail} />            
+                        }                    
+                    </>
                 }
             </div>
         </Card>

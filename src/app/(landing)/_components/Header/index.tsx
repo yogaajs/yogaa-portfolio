@@ -1,45 +1,63 @@
+'use client'
+
 //  Imports
 // ===========================================================
+
+// Libraries
+import { useState } from 'react';
+import clsx from 'clsx';
+
+// Hooks
+import useEvent from '@/hooks/use-event';
 
 // Components
 import { MotionEnterTop } from '@/components/shared/MotionEnter';
 
-// Socials
-import { discord, telegram, twitter, github, email } from '@/constants/socials';
+// Constants
+import { discord, twitter, github, email } from '@/constants/socials';
 
 
-//  Constants
+//  Constants (local)
 // ===========================================================
 
-const socials = [discord, telegram, twitter, github, email];
+const socials = [discord, twitter, github, email];
 
 
 //  Header
 // ===========================================================
 
 function Header() {
+  const [isOn, setOn] = useState(false);
+  useEvent('scroll', () => {
+    (window.scrollY > 100) ? (
+      setOn(true)
+    ) : (
+      setOn(false)
+    )
+  });
+
   return (
-    <header className="
-      fixed top-0 z-[1] 
-      w-full h-fit 
-      flex flex-row justify-end
-      p-3
-    ">
+    <header
+      className={clsx(
+        'fixed top-0 z-[100] w-full flex flex-row justify-end px-3 py-1',
+        isOn && 'backdrop-blur-[2px]'
+      )}
+    >
       <div className="w-fit h-fit flex gap-4">
         {socials.map((e, index) => {
-            const { text, Icon, props } = e;
-            return (
-              <MotionEnterTop key={`header-a-${text}`} delay={0.2*index} duration={1}>
-                <a {...props} className="flex items-center gap-2 
-                  p-1 transition-all ease-in-out duration-300 text-secondary hover:text-primary
-                ">
-                    <Icon className="text-lg" />
-                    <span className="hidden tablet:block font-f3 text-sm"> 
-                      {text}
-                    </span>
-                </a>
-              </MotionEnterTop>
-            )
+          const { text, Icon, props } = e;
+          return (
+            <MotionEnterTop key={`header-a-${text}`} delay={0.2*index} duration={1}>
+              <a {...props} className="flex items-center gap-2 p-1 
+                transition-all ease-in-out duration-500 text-secondary hover:text-primary
+              ">
+                <Icon className="text-lg" />
+                <span className="hidden tablet:block font-f3 text-sm"> 
+                  {text}
+                </span>
+              </a>
+            </MotionEnterTop>
+          )
         })}
       </div>
     </header>

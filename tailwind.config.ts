@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  darkMode: 'class',
+  //darkMode: 'class',
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -48,11 +48,14 @@ const config: Config = {
         border: "#1f2937",
       },
       keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
+        blink1s: 'blink 1s infinite',
       },
-      backgroundImage: {
-      }
     },
   },
   plugins: [],

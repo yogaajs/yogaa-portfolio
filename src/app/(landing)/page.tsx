@@ -8,12 +8,6 @@ import Skills from './_sections/3-Skills';
 import Contact from './_sections/4-Contact';
 
 
-//  Constants
-// ===========================================================
-
-const isProduction = true;
-
-
 //  Page
 // ===========================================================
 
