@@ -19,7 +19,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <div className="fixed top-0 left-0 w-full border-t border-[#707070a0]" />
+      <div className="fixed top-0 left-0 w-full border-t border-[#70707030]" />
       <Header />
       {children}
       <Footer />
