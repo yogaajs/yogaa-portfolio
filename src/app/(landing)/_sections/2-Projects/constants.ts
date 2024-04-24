@@ -17,22 +17,22 @@ export interface LinkType {
     {
         type: "Web3.0",
         title: "Decentralized applications",
-        description: "I develop decentralized applications (dApps) for Web3 and blockchain ecosystems, specializing in platforms that enable users to interact with digital assets, including NFTs. My dApps are designed with intuitive user interfaces, ensuring a seamless experience for both beginners and advanced users.",
-        skills: ['React', 'Next.js', 'Viem', 'Ether.js', 'Web3.js', 'Wagmi', '...'],
+        description: "Decentralized applications (dApps) for blockchain ecosystems, featuring intuitive user interfaces to ensure a seamless experience for beginners and advanced users alike.",
+        skills: [],
         video: "/assets/projects/dapp.mp4"
     },
     {
         type: "Landing",
-        title: "Unique User Experience",
-        description: "I create engaging landing pages tailored for products, groups, or services, enhancing user interaction and conversion rates. My designs are optimized for clarity and effectiveness, ensuring a smooth user experience while highlighting key features and benefits to boost engagement.",
-        skills: ['...', 'Figma', 'Database', 'Mail', 'Tailwind'],
+        title: "Enhance your reach",
+        description: "Engaging landing pages that enhance user interaction and conversion rates, optimized for clarity and user experience, effectively highlighting key features and benefits.",
+        skills: [],
         video: "/assets/projects/landing.mp4"
     },
     {
-        type: "Web2.0",
+        type: "You",
         title: "Your aspirations",
-        description: "I create platforms designed to unlock the potential of your aspirations, offering a full suite of features such as a reservation system, transparent payment processing, automatic GPS detection... Whatever your desires! Whether you manage transportation, accommodation, or other services, my expertise ensures a seamless start-to-end user experience!",
-        skills: ['React', 'Firebase', 'Google API', 'Spotify API', 'Stripe', '...'],
+        description: "I create tailored applications, platforms, and bots designed to unlock your aspirations, offering a full suite of features. My experience ensures a seamless user experience, regardless of your needs and expertise.",
+        skills: [],
         video: "/assets/projects/web2.mp4"
     }
 ];

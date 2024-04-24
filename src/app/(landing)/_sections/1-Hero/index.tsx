@@ -43,18 +43,18 @@ function Hero() {
                     <MotionEnterLeft delay={0} duration={1}>
                         <h1 className="font-f3 text-3xl tablet:text-4xl">
                             <span className="text-title">Hey! I'm </span>
-                            <span className="text-primary">Yogaa</span>
+                            <span className="text-primary">Yogāa</span>
                         </h1>
                     </MotionEnterLeft>
                     <MotionEnterLeft delay={0.2} duration={1}>
                         <p className="font-f3 font-normal text-3xl laptop:text-4xl text-title pt-2">
-                            I build absurd decentralized things
+                            Coffee-to-Code converter
                         </p>
                     </MotionEnterLeft>
                     <MotionEnterBottom delay={0.4} duration={1}>
                         <p className="text-lg text-[#ccd6f6a0] max-w-[650px] pt-4">
-                            I'm a full-stack developer engineer specializing in building (and occasionally designing) digital 
-                            experiences. Currently, I'm focused on the Web3 ecosystem.
+                            I'm a full-stack developer engineer with a focus on front-end, specializing in building 
+                            (and occasionally designing) digital experiences. Currently, I'm immersed in the Web3 ecosystem.
                         </p>
                     </MotionEnterBottom>
                 </div>

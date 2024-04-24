@@ -33,14 +33,14 @@ function Section() {
                 <SectionTitle.h2
                     id="03"
                     title="What's next?"
-                    description="I'm always open to opportunities and work, so please don't hesitate 
-                    to contact me if you have an idea to realize, a need, or just want to say hello!"
+                    description="Always open to new opportunities and collaborations! 
+                    Feel free to reach out if you have an idea to explore, a need, or just want to say hello!"
                 />
             </div>
             <div className="w-full max-w-[1000px] flex flex-col-reverse gap-6 p-3 tablet:flex-row items-start">
                 <div className="w-full h-fit flex flex-col justify-center items-center tablet:items-start gap-6">
                     <p className="font-f1 font-light text-base text-white text-center tablet:text-left">
-                        Feel free to drop me a line through social media, follow me or chat directly here with YogaaBot—whatever works for you. 
+                        Drop me a line through social media, follow me or chat directly here with YogaaBot—whatever works for you. 
                         Just let me know what you need, and YogaaBot will ensure I get your message!
                     </p>
                     <div className="w-full h-fit flex flex-col justify-center items-center tablet:items-start">

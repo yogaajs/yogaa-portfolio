@@ -25,7 +25,7 @@ const ConsoleText: React.FC<TitleProps> = ({ text }) => {
     useEffect(() => {
         const tID = setInterval(() => {
             setSliceIndex((i) => i + 1);
-        }, 25);
+        }, 50);
         setTypingIntervalID(tID);
     
         return () => clearInterval(tID);
@@ -50,11 +50,10 @@ const ConsoleText: React.FC<TitleProps> = ({ text }) => {
     return (
         <span className="whitespace-pre-line">
             <span className="">
-                {text.slice(0, sliceIndex-1)}
+                {text.slice(0, sliceIndex)}
             </span>
             <span className="relative">
-                {text.slice(sliceIndex-1, sliceIndex)}
-                <span className="animate-blink1s absolute left-1/2 transform -translate-x-1/2">_</span>
+                <span className="animate-blink1s">_</span>
             </span>
             <span className="invisible">
                 {text.slice(sliceIndex)}
