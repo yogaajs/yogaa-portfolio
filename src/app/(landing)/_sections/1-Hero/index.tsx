@@ -48,7 +48,7 @@ function Hero() {
                     </MotionEnterLeft>
                     <MotionEnterLeft delay={0.2} duration={1}>
                         <p className="font-f3 font-normal text-3xl laptop:text-4xl text-title pt-2">
-                            Coffee-to-Code converter
+                            a coffee-to-code converter
                         </p>
                     </MotionEnterLeft>
                     <MotionEnterBottom delay={0.4} duration={1}>
